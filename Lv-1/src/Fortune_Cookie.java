@@ -19,8 +19,8 @@ public class Fortune_Cookie implements ActionListener {
 		Button = new JButton();
 		Frame.setVisible(true);
 		Frame.setSize(100, 100);
-		int rand = new Random().nextInt(5);
-
+		int rand = new Random().nextInt(8);
+		Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Frame.add(Panel);
 		Panel.add(Button);
 		Button.addActionListener(this);
@@ -61,6 +61,16 @@ System.out.println(rand);
 			JOptionPane.showMessageDialog(null, "People rely on your dependability..... In bed!");
 
 		}
+		if (rand == 6) {
+			JOptionPane.showMessageDialog(null, "Made in the USA");
+
+		}
+		if (rand == 7) {
+			JOptionPane.showMessageDialog(null, "Error 404. Fortune not found");
+
+		}
+
+
 
 	}
 
