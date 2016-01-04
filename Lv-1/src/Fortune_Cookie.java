@@ -34,7 +34,7 @@ public class Fortune_Cookie implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method random = Integer.parseInt(rand);
-		int rand = new Random().nextInt(6);
+		int rand = new Random().nextInt(8);
 System.out.println(rand);
 		if (rand == 0) {
 			JOptionPane.showMessageDialog(null, "About time you got this out of a fortune cookie");
