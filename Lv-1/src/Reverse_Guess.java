@@ -4,6 +4,7 @@ import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -27,7 +28,7 @@ public class Reverse_Guess implements ActionListener {
 		button.addActionListener(this);
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(1000, 1000);
+		frame.setSize(100, 100);
 		panel.add(textfield);
 		panel.add(button);
 		frame.add(panel);
@@ -44,6 +45,7 @@ public class Reverse_Guess implements ActionListener {
 			z = i;		
 			}
 			System.out.println(z);
+			JOptionPane.showMessageDialog(null, "Computer guessed your number! It was " +  y + ", He guessed it in " + z + " tries!"); 
 		}
 
 	}
