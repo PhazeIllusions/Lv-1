@@ -14,21 +14,20 @@ import javax.swing.JLabel;
  * loaded.
  **/
 
-public class Book_Of_Illusions extends MouseAdapter implements ActionListener {
+public class messing_Around extends MouseAdapter implements ActionListener {
 	JFrame frame;
 	JLabel label2;
-	JLabel label;
 	/*
 	 * Here we are instantiating our BookOfIllusions class and calling it’s createBook() method. This is because we want
 	 * to get out of the static main method, so that we can add a click listener to each illusion.
 	 */
 
 	public static void main(String[] args) throws Exception {
-		Book_Of_Illusions illusions = new Book_Of_Illusions();
+		messing_Around illusions = new messing_Around();
 		illusions.createBook();
 	}
 
-	Book_Of_Illusions() {
+	messing_Around() {
 		frame = new JFrame();
 		frame.setVisible(true);
 		frame.setSize(200, 200);
@@ -63,20 +62,20 @@ public class Book_Of_Illusions extends MouseAdapter implements ActionListener {
 		if (e.getSource() == frame) {
 			System.out.println("Clicked!");
 
-			label = loadImageFromComputer("images.jpg");
+			JLabel label = loadImageFromComputer("images.jpg");
 			frame.add(label);
 			frame.remove(label2);
+			frame = new JFrame();
+			frame.setVisible(true);
+			frame.setSize(200, 200);
 			frame.pack();
-		}
-	}
+			label2 = loadImageFromComputer("556689-1113-2.jpg");
 
-	public void mousePress(MouseEvent e) {
-		if (e.getSource() == frame) {
-			System.out.println("Clicked!");
-
-			JLabel label3 = loadImageFromComputer("floating-Boat-Optical-Illusion.jpg");
-			frame.add(label3);
-			frame.remove(label);
+			frame.add(label2);
+			frame.pack();
+			frame.addMouseListener(this);
+			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frame.setSize(1000, 1000);
 			frame.pack();
 		}
 		// 11. Print "clicked!" to the console when the mouse is pressed

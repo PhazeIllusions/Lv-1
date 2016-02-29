@@ -1,5 +1,3 @@
-import javax.swing.JOptionPane;
-
 public class IntrotoWritingMethods {
 
 	public static void main(String[] args) {
@@ -40,10 +38,6 @@ public class IntrotoWritingMethods {
 	String GetTheBestCoder() {
 		return "dave";
 	}
-	int add(){
-	
-	}
-	
 
 	IntrotoWritingMethods() {
 		irock();
