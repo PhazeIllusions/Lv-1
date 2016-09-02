@@ -33,7 +33,7 @@ public class PhotoQuiz {
 		// 6. ask a question that relates to the image
 		String x = JOptionPane.showInputDialog(null, "what do you see in da face?");
 		// 7. print "CORRECT" if the user gave the right answer
-		if (x == "potatoes") {
+		if (x.equals( "potatoes")) {
 			JOptionPane.showMessageDialog(null, "correct");
 		}
 		// 8. print "INCORRECT" if the answer is wrong
@@ -58,7 +58,7 @@ public class PhotoQuiz {
 		// 13. ask another question
 		String z = JOptionPane.showInputDialog(null, "what do you see in da photo?");
 		// 14+ check answer, say if correct or incorrect, etc.
-		if (z == "small eyes") {
+		if (z.equals("small eyes")) {
 			JOptionPane.showMessageDialog(null, "correct");
 		} else {
 			JOptionPane.showMessageDialog(null,
