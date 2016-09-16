@@ -67,7 +67,7 @@ public class Painter extends JPanel implements MouseListener, MouseMotionListene
    	 
    	 public void draw(Graphics g){
    		 g.setColor(c);
-   		 g.setColor(g);
+   		 
    	
    		 g.fillRect(x, y, width, height);
    		 
