@@ -1,9 +1,9 @@
 
 public class Backpack {
 	
-	private Pencil pencil;
-	private Ruler ruler;
-	private Textbook textbook;
+	private Pencil2 pencil;
+	private Ruler2 ruler;
+	private Textbook2 textbook;
 
 	Backpack(){
 		System.out.println("Nice Backpack");
@@ -12,10 +12,10 @@ public class Backpack {
 	public static void main (String[] args){
 		/* Your mission is to get to school, but first you need to get all of your supplies into your backpack. */
 Backpack backpack = new Backpack();
-Textbook textbook = new Textbook();
-Supply supply = new Supply();
-Pencil pencil = new Pencil();
-Ruler ruler = new Ruler();
+Textbook2 textbook = new Textbook2();
+Supply2 supply = new Supply2();
+Pencil2 pencil = new Pencil2();
+Ruler2 ruler = new Ruler2();
 backpack.putInBackpack(ruler);
 backpack.putInBackpack(pencil);
 backpack.putInBackpack(textbook);
@@ -24,15 +24,15 @@ backpack.goToSchool();
 
 	}
 	
-	public void putInBackpack(Supply supply){
-		if (supply instanceof Pencil){
-			this.pencil = (Pencil) supply;
+	public void putInBackpack(Supply2 supply){
+		if (supply instanceof Pencil2){
+			this.pencil = (Pencil2) supply;
 			System.out.println("You put your pencil in your Backpack");
-		}else if(supply instanceof Ruler){
-			this.ruler = (Ruler) supply;
+		}else if(supply instanceof Ruler2){
+			this.ruler = (Ruler2) supply;
 			System.out.println("You put your ruler in your Backpack");
-		}else if(supply instanceof Textbook){
-			this.textbook = (Textbook) supply;
+		}else if(supply instanceof Textbook2){
+			this.textbook = (Textbook2) supply;
 			System.out.println("You put your textbook in your Backpack");
 		}else{
 			System.out.println("That isn't a valid school supply");
@@ -52,7 +52,7 @@ class Supply {
 	protected String name;
 }
 
-class Pencil extends Supply {
+class Pencil extends Supply2 {
 	
 	Pencil(){
 		this.name = "pencil";
@@ -65,7 +65,7 @@ class Pencil extends Supply {
 }
 
 
-class Ruler extends Supply {
+class Ruler extends Supply2 {
 
 	Ruler(){
 		this.name = "ruler";
@@ -77,7 +77,7 @@ class Ruler extends Supply {
 	}
 }
 
-class Textbook extends Supply{
+class Textbook extends Supply2{
 
 	Textbook(){
 		this.name = "textbook";
