@@ -1,4 +1,4 @@
-// Make a class, main method and showButton method. Put a printout in the showButton method and challenge kids to get it
+ // Make a class, main method and showButton method. Put a printout in the showButton method and challenge kids to get it
 // printing (they will need to instantiate class and call method on the instance).
 // FortuneCookie fortune = new FortuneCookie();
 // fortune.showButton();
