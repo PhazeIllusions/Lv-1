@@ -48,7 +48,7 @@ public class Painter extends JPanel implements MouseListener, MouseMotionListene
     }
     
     private void addDot(int x, int y){
-   	 dots.add(new Dot(x, y, 1000, 1000));
+   	 dots.add(new Dot(x, y, 10, 10));
     }
 
 
