@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class SlotMachine extends JPanel implements ActionListener {
+public class SlotMachineBackup extends JPanel implements ActionListener {
 	public static final int WIDTH = 500;
 	public static final int HEIGHT = 500;
 
@@ -32,7 +32,7 @@ public class SlotMachine extends JPanel implements ActionListener {
 		new SlotMachine();
 	}
 
-	public SlotMachine() {
+	public SlotMachineBackup() {
 
 		try {
 
