@@ -1,18 +1,26 @@
 import java.applet.AudioClip;
 import java.sql.Date;
+import java.util.Random;
 
 import javax.swing.JApplet;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 //Make a drawButtons method that takes a random number as a parameter. It should make a GUI like this, but the “mole!” location is random.
 //	[Hint: set the size of the frame rather than packing it.]
 public class WhackAMole {
+	JFrame frame = new JFrame();
+	JPanel panel = new JPanel();
+
+	
 //
 //
 //
 //If they click on a button other than “mole!”, use this speak() method to call them a dork. 
 void speak(String words) {
-try {
+try { 
 	words = "dork";
 Runtime.getRuntime().exec("say " + words).waitFor();
 } catch (Exception e) {
@@ -20,7 +28,32 @@ e.printStackTrace();
 }
 }
 
+public static void main(String[] args){
+	WhackAMole x = new WhackAMole();
+	
+	int numOfButtons = 100;
+	x.drawButtons(  new Random().nextInt(numOfButtons ));
+}
+private void drawButtons(int random){
+	frame.add(panel);
+	
+	
+		for (int i = 0; i < 100; i++) {
+		JButton b1 = new JButton();
+		panel.add(b1);
+		if(i == random){
+		b1.setText("Mole!");
+		frame.remove(frame);
+	}
+	}
+	
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setVisible(true);
+	frame.setSize(800, 400);
+	
+	
 
+}
 //
 //
 //Dispose of the frame and draw the buttons anew.
@@ -43,9 +76,5 @@ private void playSound(String fileName) {
 		AudioClip sound = JApplet.newAudioClip(getClass().getResource(fileName));
 		sound.play();
 	}
-	void drawButtons (int rand) {		
-	for (int i = 0; i < 1; i++) {
-		
-	}	
+	
 	}
-}
