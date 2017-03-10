@@ -13,8 +13,7 @@ import javax.swing.JPanel;
 public class WhackAMole {
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
-
-	
+	JButton moleButton;
 //
 //
 //
@@ -38,12 +37,14 @@ private void drawButtons(int random){
 	frame.add(panel);
 	
 	
+	
+	
 		for (int i = 0; i < 100; i++) {
 		JButton b1 = new JButton();
 		panel.add(b1);
 		if(i == random){
 		b1.setText("Mole!");
-		frame.remove(frame);
+		
 	}
 	}
 	
