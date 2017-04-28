@@ -13,27 +13,33 @@ public class SpellingBee {
 	ArrayList<String> words = new ArrayList<>();
 
 	/*
-	 * Get a random word using the randomWord() method and ask the user how to spell it using the speak() method. If the
-	 * user spells it right move on to a new word, but if they do not spell it right ask again. The only place that you
-	 * need to write code in is the stuffForYouToDo() Method
+	 * Get a random word using the randomWord() method and ask the user how to
+	 * spell it using the speak() method. If the user spells it right move on to
+	 * a new word, but if they do not spell it right ask again. The only place
+	 * that you need to write code in is the stuffForYouToDo() Method
 	 */
 	public void stuffForYouToDo() {
-		// You write code in here
-
-		String y = randomWord();
-		Speak(y);
-		String said = JOptionPane.showInputDialog(null, "Type whatever the computer said");
-		if (said.equals(y)) {
-			Speak("Goteem!");
-
-		} else {
-			Speak("EVEN A COMPUTER IS CALLING YOU STUPID");
-
+		//You write code in here
+		String randomWord;
+		randomWord = randomWord();
+		speak(randomWord());
+		System.out.println(randomWord);
+		String said = JOptionPane.showInputDialog("Type what the computer said");
+		if(said.equals(randomWord)){
+			speak("Correct");
 		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 	public String randomWord() {
-
 		return words.get(new Random().nextInt(lines));
 	}
 
@@ -64,7 +70,7 @@ public class SpellingBee {
 		new SpellingBee();
 	}
 
-	public void Speak(String text) {
+	public void speak(String text) {
 		try {
 			Runtime.getRuntime().exec("say " + text).waitFor();
 		} catch (InterruptedException | IOException e) {
@@ -81,3 +87,4 @@ public class SpellingBee {
 	}
 
 }
+
